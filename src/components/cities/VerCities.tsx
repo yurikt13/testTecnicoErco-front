@@ -25,7 +25,7 @@ const VerCities = () => {
         const element = <InformacionCiudad>
             {
                 cities ? cities.map(cities => (
-                    cities ? <p>Población: {cities.POPULATION}</p> : <p></p>
+                    id === cities.ID_CITY ? <p>Población: {cities.POPULATION}</p> : <p></p>
                 )) : <></>
             }
         </InformacionCiudad>
