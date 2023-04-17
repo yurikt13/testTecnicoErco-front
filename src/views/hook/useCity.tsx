@@ -5,7 +5,7 @@ import { setCities } from "../../stateManagement/reducers/cityReducer";
 const useCountry = () => {
 
     const dispatch = useDispatch();
-
+    
     const getCities = async () => {
         const data = await fetch('http://localhost:3300/ciudades')
         const result = await data.json()

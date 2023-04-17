@@ -8,12 +8,20 @@ const useFindCity = () => {
     const obtenerCiudad = async (id: string) => {
         const data = await fetch(`http://localhost:3300/ciudades/${id}`)
         const result = await data.json()
+        console.log(result)
         dispatch(setCities(result.ciudades))
+    }
 
+    const mostrarCiudad = async (id: string) => {
+        const data = await fetch(`http://localhost:3300/ciudades/encontrarCiudad/${id}`)
+        const result = await data.json()
+        console.log(result)
+        dispatch(setCities(result.ciudades))
     }
 
     return {
-        obtenerCiudad: obtenerCiudad
+        obtenerCiudad: obtenerCiudad,
+        mostrarCiudad: mostrarCiudad
     }
 }
 

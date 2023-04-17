@@ -6,13 +6,12 @@ const VerStates = () => {
   const { states } = useState();
   const { obtenerCiudad } = useFindCity()
 
-
   return (
     <div>
       <select
         onChange={(e) => obtenerCiudad(e.target.value)}
       >
-        <option selected>Estado</option>
+        <option selected disabled>Escoge el estado</option>
         {
           states ? states.map(states => (
             <option value={states.ID_STATE}>{states.NAME}</option>

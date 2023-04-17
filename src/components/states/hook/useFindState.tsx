@@ -10,7 +10,7 @@ const useFindState = () => {
         const data = await fetch(`http://localhost:3300/estados/${id}`)
         const result = await data.json()
         dispatch(setStates(result.estados))
-
+        console.log(result)
     }
 
     return {
